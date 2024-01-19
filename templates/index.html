@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+<div class ="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+            <div class="jumbotron p-3" style="background-color: antiquewhite;">
+                <h2>Manage <b>Employees </b> <button type="button" class="btn btn-success" style="float:right"
+                data-toggle="modal" data-target="#mymodal">Add new Employees</button></h2>
+
+                <table class="table table-hover table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>01</td>        
+                        <td>Sanjit</td>
+                        <td>jassu_massu@gmail.com</td>
+                        <td>7474873974897</td>
+                        <td>
+                            <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
+                            <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure')">Delete</a>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
